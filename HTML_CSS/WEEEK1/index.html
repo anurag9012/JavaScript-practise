@@ -1,18 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
     <h1>forms validation week1</h1>
+    <h2>input types</h2>
+
     <form action=" ">
-        <button onclick="alert('Are you sure you want to continue?')"> 
-            <img src="https://yourserver.com/button_img.jpg" 
-                alt="Submit the form" height="64" width="64">
-         </button> 
+      <p>input type button</p>
+      
+      <button onclick="alert('Are you sure you want to continue?')">
+        click me
+      </button>
+
+      <p>input type checkbox</p>
+      <input type="checkbox" id="dog" name="dog" value="Dog" />
+      <label for="dog">I like dogs</label>
+      <input type="checkbox" id="cat" name="cat" value="Cat" />
+      <label for="cat">I like cats</label>
+
+      <p>input type radio</p>
+      <input type="radio" id="light" name="theme" value="Light" />
+      <label for="light">Light</label>
+      <input type="radio" id="dark" name="theme" value="Dark" />
+      <label for="dark">Dark</label>
+      <p>user input</p>
+      <label for="username">
+        username
+  
+        <input type="text" name="username" id="username" required minlength="4">
+      </label>
+
+       <button style="display: block;" type="submit">submit</button>
+<fieldset id="gender">
+  <label >
+    male<input type="radio" name="gender" value="male">
+ 
+  </label>
+  <label > female<input type="radio" name="gender"  value="female"></label>
+</fieldset>
+
+<p>no of people coming in party</p>
+
+<input type="range" name="no_of_people" id="no_of_people" min="1" max="10" value="4" oninput="this.nextElementSibling.value=this.value">
+  <output>4</output>
+
+  <p>datalist as the options are many and the user can enter his own value also</p>
+  <label for="flowers">Favourite flower:</label><br> 
+  <input list="flowers" name="flowers" > 
+  <datalist id="flowers"> 
+    <option value="Rose"> 
+    <option value="Lily"> 
+    <option value="Tulip"> 
+    <option value="Daffodil"> 
+    <option value="Orchid"> 
+  </datalist> 
+<p>dropdown</p>
+<label for="selecting location">selecting location</label>
+<select name="" id="selecting location">
+  <option value="delhi">delhi</option>
+      <option value="mumbai">mumbai</option>
+</select>
     </form>
-</body>
+  </body>
 </html>
